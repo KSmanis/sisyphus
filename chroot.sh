@@ -34,14 +34,6 @@ tar xpf stage3.tar.xz --xattrs-include='*.*' --numeric-owner -C "${WORKDIR}"
 
 rsync -av ./data/ "${WORKDIR}/"
 
-cat > "${WORKDIR}/github.conf" <<EOF
-[github]
-priority = 9999
-sync-uri = https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/binrepo
-fetchcommand = /usr/bin/portage-github-binrepo pull "\${URI}" "\${DISTDIR}/\${FILE}"
-resumecommand = /usr/bin/portage-github-binrepo pull "\${URI}" "\${DISTDIR}/\${FILE}"
-verify-signature = false
-EOF
 printf 'repository = %s\n' "${GITHUB_REPOSITORY}" > "${WORKDIR}/binrepo.conf"
 unset GITHUB_REPOSITORY
 install -m 0400 /dev/null "${WORKDIR}/binrepo.token"

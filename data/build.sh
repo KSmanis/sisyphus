@@ -21,7 +21,6 @@ ACCEPT_KEYWORDS="**" emerge --oneshot app-portage/portage-github-binrepo
 echo 'source /usr/share/portage-github-binrepo/portage-github-binrepo.bashrc' > /etc/portage/bashrc
 mv /binrepo.conf /etc/portage/github-binrepo.conf
 mv /binrepo.token /etc/portage/github-binrepo.token
-mv /github.conf /etc/portage/binrepos.conf/github.conf
 
 portage-github-binrepo pull
 emerge --info
