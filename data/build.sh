@@ -16,7 +16,8 @@ rm -rf /var/db/repos/gentoo/
 emaint sync
 
 emerge --oneshot sys-apps/portage
-emerge --oneshot app-portage/gentoolkit
+# v0.8.0 introduces --unreachable flag
+emerge --oneshot 'app-portage/gentoolkit>=0.8.0'
 ACCEPT_KEYWORDS="**" emerge --oneshot app-portage/portage-github-binrepo
 echo 'source /usr/share/portage-github-binrepo/portage-github-binrepo.bashrc' > /etc/portage/bashrc
 mv /binrepo.conf /etc/portage/github-binrepo.conf
@@ -26,5 +27,5 @@ portage-github-binrepo pull
 emerge --info
 emerge -uDU --onlydeps --onlydeps-with-rdeps=n @world
 emerge -uDU --buildpkgonly @world
-eclean packages
+eclean packages --unreachable
 portage-github-binrepo push
