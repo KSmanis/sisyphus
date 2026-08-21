@@ -17,7 +17,7 @@ emaint sync
 
 emerge --oneshot sys-apps/portage
 # v0.8.0 introduces --unreachable flag
-emerge --oneshot 'app-portage/gentoolkit>=0.8.0'
+emerge --oneshot '>=app-portage/gentoolkit-0.8.0'
 ACCEPT_KEYWORDS="**" emerge --oneshot app-portage/portage-github-binrepo
 echo 'source /usr/share/portage-github-binrepo/portage-github-binrepo.bashrc' > /etc/portage/bashrc
 mv /binrepo.conf /etc/portage/github-binrepo.conf
