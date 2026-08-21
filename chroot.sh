@@ -34,11 +34,11 @@ tar xpf stage3.tar.xz --xattrs-include='*.*' --numeric-owner -C "${WORKDIR}"
 
 rsync -av ./data/ "${WORKDIR}/"
 
-printf 'repository = %s\n' "${GITHUB_REPOSITORY}" > "${WORKDIR}/binrepo.conf"
+echo "repository = ${GITHUB_REPOSITORY}" > "${WORKDIR}/binrepo.conf"
 unset GITHUB_REPOSITORY
-install -m 0400 /dev/null "${WORKDIR}/binrepo.token"
-printf '%s\n' "${GITHUB_TOKEN}" > "${WORKDIR}/binrepo.token"
+echo "${GITHUB_TOKEN}" > "${WORKDIR}/binrepo.token"
 unset GITHUB_TOKEN
+chmod 0400 "${WORKDIR}/binrepo.token"
 
 mount --rbind /dev "${WORKDIR}/dev"
 mount --make-rslave "${WORKDIR}/dev"
