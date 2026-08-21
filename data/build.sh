@@ -25,7 +25,7 @@ mv /binrepo.token /etc/portage/github-binrepo.token
 
 portage-github-binrepo pull
 emerge --info
-emerge -uDU --onlydeps --onlydeps-with-rdeps=n @world
-emerge -uDU --buildpkgonly @world
+emerge -uDU --changed-deps --onlydeps --onlydeps-with-rdeps=n @world
+emerge -uDU --changed-deps --buildpkgonly @world
 eclean packages --unreachable
 portage-github-binrepo push
