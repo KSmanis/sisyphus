@@ -4,8 +4,9 @@ set -efux
 : "${GITHUB_REPOSITORY:?GITHUB_REPOSITORY is required}"
 : "${GITHUB_TOKEN:?GITHUB_TOKEN is required}"
 
-STAGE3_BASE_URL='https://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64-openrc'
-STAGE3_LATEST_FILE='latest-stage3-amd64-openrc.txt'
+STAGE3_ID=amd64-openrc
+STAGE3_BASE_URL="https://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-${STAGE3_ID}"
+STAGE3_LATEST_FILE="latest-stage3-${STAGE3_ID}.txt"
 WORKDIR="$PWD/chroot"
 
 cleanup() {
@@ -19,18 +20,25 @@ cleanup() {
 }
 trap cleanup EXIT
 
-mkdir -p "${WORKDIR}"
+export GNUPGHOME="$PWD/.gnupg"
+mkdir -p "${GNUPGHOME}"
+chmod 0700 "${GNUPGHOME}"
+gpg --batch --keyserver hkps://keys.gentoo.org --recv-keys 13EBBDBEDE7A12775DFDB1BABB572E0E2D182910
 
-curl -fsSL "${STAGE3_BASE_URL}/${STAGE3_LATEST_FILE}" -o latest-stage3.txt
-stage3_file="$(grep -m1 -o '^stage3-amd64-openrc.*\.tar\.xz' latest-stage3.txt)"
+wget -nv "${STAGE3_BASE_URL}/${STAGE3_LATEST_FILE}"
+gpgv --keyring pubring.kbx "${STAGE3_LATEST_FILE}"
+
+stage3_file="$(grep -m1 -o "^stage3-${STAGE3_ID}.*\.tar\.xz" "${STAGE3_LATEST_FILE}")"
 if [ -z "${stage3_file}" ]; then
   echo "Failed to resolve stage3 filename." >&2
   exit 1
 fi
 
-curl -fSL "${STAGE3_BASE_URL}/${stage3_file}" -o stage3.tar.xz
+wget -nv "${STAGE3_BASE_URL}/${stage3_file}.asc" "${STAGE3_BASE_URL}/${stage3_file}"
+gpgv --keyring pubring.kbx "${stage3_file}.asc" "${stage3_file}"
 
-tar xpf stage3.tar.xz --xattrs-include='*.*' --numeric-owner -C "${WORKDIR}"
+mkdir -p "${WORKDIR}"
+tar xpf "${stage3_file}" --xattrs-include='*.*' --numeric-owner -C "${WORKDIR}"
 
 rsync -av ./data/ "${WORKDIR}/"
 
