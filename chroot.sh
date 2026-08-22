@@ -25,7 +25,7 @@ mkdir -p "${GNUPGHOME}"
 chmod 0700 "${GNUPGHOME}"
 gpg --batch --keyserver hkps://keys.gentoo.org --recv-keys 13EBBDBEDE7A12775DFDB1BABB572E0E2D182910
 
-wget -nv "${STAGE3_BASE_URL}/${STAGE3_LATEST_FILE}"
+wget -nv "${STAGE3_BASE_URL}/${STAGE3_LATEST_FILE}" -O "${STAGE3_LATEST_FILE}"
 gpgv --keyring pubring.kbx "${STAGE3_LATEST_FILE}"
 
 stage3_file="$(grep -m1 -o "^stage3-${STAGE3_ID}.*\.tar\.xz" "${STAGE3_LATEST_FILE}")"
@@ -34,7 +34,8 @@ if [ -z "${stage3_file}" ]; then
   exit 1
 fi
 
-wget -nv "${STAGE3_BASE_URL}/${stage3_file}.asc" "${STAGE3_BASE_URL}/${stage3_file}"
+wget -nv "${STAGE3_BASE_URL}/${stage3_file}.asc" -O "${stage3_file}.asc"
+wget -nv "${STAGE3_BASE_URL}/${stage3_file}" -O "${stage3_file}"
 gpgv --keyring pubring.kbx "${stage3_file}.asc" "${stage3_file}"
 
 mkdir -p "${WORKDIR}"
