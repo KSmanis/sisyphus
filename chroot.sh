@@ -34,8 +34,14 @@ if [ -z "${stage3_file}" ]; then
   exit 1
 fi
 
-wget -nv "${STAGE3_BASE_URL}/${stage3_file}.asc" -O "${stage3_file}.asc"
+wget -nv "${STAGE3_BASE_URL}/${stage3_file}.sha256" -O "${stage3_file}.sha256"
+gpgv --keyring pubring.kbx "${stage3_file}.sha256"
+gpg --batch --decrypt "${stage3_file}.sha256" > "${stage3_file}.sha256.verified"
+
 wget -nv "${STAGE3_BASE_URL}/${stage3_file}" -O "${stage3_file}"
+sha256sum --check "${stage3_file}.sha256.verified"
+
+wget -nv "${STAGE3_BASE_URL}/${stage3_file}.asc" -O "${stage3_file}.asc"
 gpgv --keyring pubring.kbx "${stage3_file}.asc" "${stage3_file}"
 
 mkdir -p "${WORKDIR}"
