@@ -23,7 +23,7 @@ trap cleanup EXIT
 export GNUPGHOME="$PWD/.gnupg"
 mkdir -p "${GNUPGHOME}"
 chmod 0700 "${GNUPGHOME}"
-gpg --batch --keyserver hkps://keys.gentoo.org --recv-keys 13EBBDBEDE7A12775DFDB1BABB572E0E2D182910
+gpg --batch --import "$PWD/keys/gentoo-release.asc"
 
 wget -nv "${STAGE3_BASE_URL}/${STAGE3_LATEST_FILE}" -O "${STAGE3_LATEST_FILE}"
 gpgv --keyring pubring.kbx "${STAGE3_LATEST_FILE}"
