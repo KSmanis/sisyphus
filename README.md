@@ -20,8 +20,8 @@ publishes binpkgs as they are built, using
 As an example, this repo adds `app-misc/hello` to the world set.
 
 If configuration alone is insufficient, adjust [`data/build.sh`](data/build.sh).
-Modify [`chroot.sh`](chroot.sh) only when the stage3 or chroot setup must
-change.
+Modify [`scripts/chroot.sh`](scripts/chroot.sh) only when the stage3 or chroot
+setup must change.
 
 No additional secret is required. The workflow publishes to its own repository
 with the built-in `GITHUB_TOKEN`.

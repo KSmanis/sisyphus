@@ -17,7 +17,22 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - name: Identify stage3
+        id: stage3
+        run: ./scripts/identify-stage3.sh
+      - name: Restore stage3
+        id: stage3-cache
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ${{ steps.stage3.outputs.file }}
+          key: stage3|${{ steps.stage3.outputs.file }}
+      - name: Fetch stage3
+        if: steps.stage3-cache.outputs.cache-hit != 'true'
+        env:
+          STAGE3_FILE: ${{ steps.stage3.outputs.file }}
+        run: ./scripts/fetch-stage3.sh
       - name: Build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: sudo --preserve-env=GITHUB_REPOSITORY,GITHUB_TOKEN ./chroot.sh
+          STAGE3_FILE: ${{ steps.stage3.outputs.file }}
+        run: sudo --preserve-env=GITHUB_REPOSITORY,GITHUB_TOKEN,STAGE3_FILE ./scripts/chroot.sh
