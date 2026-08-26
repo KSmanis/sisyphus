@@ -9,6 +9,7 @@ RUN set -eux; \
     mkdir -p /etc/portage/repos.conf; \
     printf '[gentoo]\nlocation = /var/db/repos/gentoo\nsync-type = git\nsync-uri = https://github.com/gentoo-mirror/gentoo\nsync-git-verify-commit-signature = true\n' > /etc/portage/repos.conf/gentoo.conf; \
     printf '[rookery]\nlocation = /var/db/repos/rookery\nsync-type = git\nsync-uri = https://github.com/KSmanis/rookery\n' > /etc/portage/repos.conf/rookery.conf; \
+    rm -rf /var/db/repos/gentoo; \
     emaint sync; \
     emerge --oneshot sys-apps/portage; \
     emerge --oneshot app-portage/gentoolkit
