@@ -7,21 +7,20 @@ until all `@world` updates have been emerged, then rests. By default it runs
 every hour or when the `main` branch is updated. Only one instance may run at
 any time: newer runs cancel older runs.
 
-It works by bootstrapping a minimal, but configurable, Gentoo chroot that
+It works by bootstrapping a minimal, but configurable, Gentoo container that
 publishes binpkgs as they are built, using
 [portage-github-binrepo](https://github.com/KSmanis/portage-github-binrepo).
 
 ## Usage
 
 1. Fork this repository.
-2. Customize the chroot seed directory [`data/`](data/) for your systems, e.g.,
-   your Portage configuration.
+2. Customize the container seed directory [`data/`](data/) for your systems,
+   e.g., your Portage configuration.
 
 As an example, this repo adds `app-misc/hello` to the world set.
 
 If configuration alone is insufficient, adjust [`data/build.sh`](data/build.sh).
-Modify [`scripts/chroot.sh`](scripts/chroot.sh) only when the stage3 or chroot
-setup must change.
+Modify the [`Dockerfile`](Dockerfile) only when the base system must change.
 
 No additional secret is required. The workflow publishes to its own repository
 with the built-in `GITHUB_TOKEN`.
