@@ -24,6 +24,7 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           load: true
+          pull: true
       - name: Build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

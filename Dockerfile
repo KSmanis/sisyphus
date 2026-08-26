@@ -1,11 +1,11 @@
-FROM ghcr.io/ksmanis/stage3:20260824@sha256:7eac94c2d143dbc44bbf6f618e28491b587339e5e752368ec54a3011f870c0ec
+# hadolint ignore=DL3006
+FROM ghcr.io/ksmanis/stage3
 
 COPY data/ /
 
-RUN --mount=type=bind,from=ghcr.io/ksmanis/portage,source=/var/db/repos/gentoo,target=/var/db/repos/gentoo \
-    emerge --oneshot dev-vcs/git
-
 RUN set -eux; \
+    emerge-webrsync; \
+    emerge --oneshot dev-vcs/git; \
     mkdir -p /etc/portage/repos.conf; \
     printf '[gentoo]\nlocation = /var/db/repos/gentoo\nsync-type = git\nsync-uri = https://github.com/gentoo-mirror/gentoo\nsync-git-verify-commit-signature = true\n' > /etc/portage/repos.conf/gentoo.conf; \
     printf '[rookery]\nlocation = /var/db/repos/rookery\nsync-type = git\nsync-uri = https://github.com/KSmanis/rookery\n' > /etc/portage/repos.conf/rookery.conf; \

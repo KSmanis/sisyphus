@@ -3,13 +3,5 @@
   "extends": [
     "KSmanis/renovate-config"
   ],
-  "packageRules": [
-    {
-      "matchPackageNames": [
-        "ghcr.io/ksmanis/portage"
-      ],
-      "pinDigests": false
-    }
-  ],
   "semanticCommits": "enabled"
 }
