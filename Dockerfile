@@ -15,7 +15,7 @@ RUN set -eux; \
     emerge --oneshot app-portage/gentoolkit
 
 # renovate: datasource=github-releases depName=KSmanis/portage-github-binrepo
-ARG PORTAGE_GITHUB_BINREPO_VERSION=2.0.3
+ARG PORTAGE_GITHUB_BINREPO_VERSION=2.0.4
 RUN set -eux; \
     ACCEPT_KEYWORDS="**" emerge --oneshot "=app-portage/portage-github-binrepo-${PORTAGE_GITHUB_BINREPO_VERSION}"; \
     echo 'source /usr/share/portage-github-binrepo/portage-github-binrepo.bashrc' > /etc/portage/bashrc
