@@ -67,7 +67,6 @@ PGB-ASSET-ID-559659336-PATH: binrepo/0/x86_64-pc-linux-gnu__dev-python__wheel-0.
 PGB-ASSET-ID-559845047-PATH: binrepo/0/x86_64-pc-linux-gnu__dev-python__tomlkit-0.15.1__2__e6f03b72c7afb71011e6ecb63b3d31c325b37bb049b360ac036bd7696f17dc9b.gpkg.tar
 PGB-ASSET-ID-559845617-PATH: binrepo/0/x86_64-pc-linux-gnu__dev-python__hatchling-1.32.0__1__8748a6d7e2678b112ae8942e6f30db4b1e594c996d4426803c051fe46607ae61.gpkg.tar
 PGB-ASSET-ID-560739592-PATH: binrepo/0/x86_64-pc-linux-gnu__dev-libs__libgcrypt-1.12.4__1__4b0ba9fb250fcb09d7525665861e18068ef17d903a8b05aeade5ac72315fba32.gpkg.tar
-PGB-CLEANUP: [{"asset_id":535334608,"release_id":374304579,"tag":"binrepo/0"},{"asset_id":542256838,"release_id":374304579,"tag":"binrepo/0"}]
 PROFILE: default/linux/amd64/23.0
 REPO_REVISIONS: {"gentoo": "b6d20f9660099d994a925499f26b537baf8c1f01"}
 TIMESTAMP: 1789370530
