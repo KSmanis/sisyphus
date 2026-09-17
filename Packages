@@ -119,7 +119,6 @@ PGB-ASSET-ID-566701429-PATH: binrepo/0/x86_64-pc-linux-gnu__acct-user__root-0-r3
 PGB-ASSET-ID-566701970-PATH: binrepo/0/x86_64-pc-linux-gnu__acct-user__mail-0-r3__3__2a952a09aa1d5336638e99564c2f83eb7ebad986ddc6ad6f0d081d677a492e07.gpkg.tar
 PGB-ASSET-ID-566702121-PATH: binrepo/0/x86_64-pc-linux-gnu__acct-user__postmaster-0-r3__3__aeab190f1c4a0bdca2629a8fc95298b77fe273e93562911eed3ff748a9fbe3a9.gpkg.tar
 PGB-ASSET-ID-566702255-PATH: binrepo/0/x86_64-pc-linux-gnu__acct-user__sshd-0-r3__3__8ff1bb1c73314be95ac3ef1db2b5d99b4da014b7630b4510d6155c1c42503582.gpkg.tar
-PGB-CLEANUP: [{"asset_id":524788445,"release_id":374304579,"tag":"binrepo/0"},{"asset_id":542252412,"release_id":374304579,"tag":"binrepo/0"},{"asset_id":542257807,"release_id":374304579,"tag":"binrepo/0"}]
 PROFILE: default/linux/amd64/23.0
 REPO_REVISIONS: {"gentoo": "dcb6935be260b0272be88ae0f71fbb84d82d2469"}
 TIMESTAMP: 1789628312
