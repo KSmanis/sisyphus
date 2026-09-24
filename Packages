@@ -171,7 +171,6 @@ PGB-ASSET-ID-583177389-PATH: binrepo/0/x86_64-pc-linux-gnu__net-misc__rsync-3.5.
 PGB-ASSET-ID-583178277-PATH: binrepo/0/x86_64-pc-linux-gnu__dev-libs__expat-2.8.5__1__05280613452dfec0a3e1b1f12cee20cb7090198a6aaa54ff51fc11afc1ad8888.gpkg.tar
 PGB-ASSET-ID-583179893-PATH: binrepo/0/x86_64-pc-linux-gnu__app-portage__gemato-20.15__1__d28510468bbc32ec137c7552fa3b8ce141a403cc57dce0f27f548b1d227b7a8a.gpkg.tar
 PGB-ASSET-ID-583727197-PATH: binrepo/0/x86_64-pc-linux-gnu__sys-devel__binutils-2.47__1__efa237ec95d15fd3552de1e8f94c27c0215049bf39268b11189a632f09809584.gpkg.tar
-PGB-CLEANUP: [{"asset_id":545896643,"release_id":374304579,"tag":"binrepo/0"}]
 PROFILE: default/linux/amd64/23.0
 REPO_REVISIONS: {"gentoo": "56f71b698bf9f2434463e72959ca8c32f9fc08aa"}
 TIMESTAMP: 1790232777
