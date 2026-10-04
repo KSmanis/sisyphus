@@ -160,7 +160,6 @@ PGB-ASSET-ID-593872448-PATH: binrepo/0/x86_64-pc-linux-gnu__sys-devel__gcc-16.2.
 PGB-ASSET-ID-598693431-PATH: binrepo/0/x86_64-pc-linux-gnu__sys-libs__glibc-2.43-r4__1__8b091322f2c5888836b82a9989d2eb991595d8f231a7597fadbef85c3095d568.gpkg.tar
 PGB-ASSET-ID-599632840-PATH: binrepo/0/x86_64-pc-linux-gnu__dev-libs__libpcre2-10.49__1__27578e7d7bb15763f122b312f9ff08f6fb22795763121dcba053352862d1f15d.gpkg.tar
 PGB-ASSET-ID-607807556-PATH: binrepo/0/x86_64-pc-linux-gnu__dev-python__platformdirs-4.11.7__1__8052d9949f5ae4f77e98e557a79a78f8bb59e061faecb8b8f0b97fb55f50e893.gpkg.tar
-PGB-CLEANUP: [{"asset_id":590577311,"release_id":374304579,"tag":"binrepo/0"}]
 PROFILE: default/linux/amd64/23.0
 REPO_REVISIONS: {"gentoo": "c22783c4635e21bbffde0c934a94f1154fc9b119"}
 TIMESTAMP: 1791104336
