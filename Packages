@@ -162,7 +162,6 @@ PGB-ASSET-ID-607807556-PATH: binrepo/0/x86_64-pc-linux-gnu__dev-python__platform
 PGB-ASSET-ID-614358107-PATH: binrepo/0/x86_64-pc-linux-gnu__dev-libs__expat-2.9.0__1__1e26629c10f7da2e02c2a5400eee6465066096ac4de73fe651f7d387e495dacd.gpkg.tar
 PGB-ASSET-ID-614573817-PATH: binrepo/0/x86_64-pc-linux-gnu__dev-python__vcs-versioning-2.3.4__1__a2c36df7b7f679002156e70195c19b45dd7430ced5fe0843fbd88b772fe74240.gpkg.tar
 PGB-ASSET-ID-616771543-PATH: binrepo/0/x86_64-pc-linux-gnu__sys-apps__portage-3.0.82.2-r1__1__e8ab392b8dbb88ff0c1ea22f12d10c0a2b1c96034f68a58856e9d4e61909de87.gpkg.tar
-PGB-CLEANUP: [{"asset_id":574513730,"release_id":374304579,"tag":"binrepo/0"}]
 PROFILE: default/linux/amd64/23.0
 REPO_REVISIONS: {"gentoo": "3764ae51101574157a594f5534918dabfd56fac5"}
 TIMESTAMP: 1791360252
