@@ -194,7 +194,6 @@ PGB-ASSET-ID-673076023-PATH: binrepo/0/x86_64-pc-linux-gnu__dev-build__automake-
 PGB-ASSET-ID-673076778-PATH: binrepo/0/x86_64-pc-linux-gnu__dev-libs__libffi-3.8.0__1__97370f3c2fd3d9fa879fb266564d7f746f77d1780f2fc8b5ca2621d12cb36039.gpkg.tar
 PGB-ASSET-ID-673078260-PATH: binrepo/0/x86_64-pc-linux-gnu__dev-build__automake-1.19__1__1ff2a268a689be9b865ddfce95a0f79e380359f8011e0533030be76560c4f57f.gpkg.tar
 PGB-ASSET-ID-673080418-PATH: binrepo/0/x86_64-pc-linux-gnu__sys-apps__less-710__1__abd652d7cd95409d867bd78311a47ae6104f990a8a22b3a813991e4551376fdf.gpkg.tar
-PGB-CLEANUP: [{"asset_id":538533550,"release_id":374304579,"tag":"binrepo/0"},{"asset_id":576350529,"release_id":374304579,"tag":"binrepo/0"}]
 PROFILE: default/linux/amd64/23.0
 REPO_REVISIONS: {"gentoo": "137db20bdfb401c50bf6150607025cfd81d92075"}
 TIMESTAMP: 1792869191
