@@ -197,7 +197,6 @@ PGB-ASSET-ID-675278412-PATH: binrepo/0/x86_64-pc-linux-gnu__virtual__openssh-0-r
 PGB-ASSET-ID-675726873-PATH: binrepo/0/x86_64-pc-linux-gnu__sys-libs__libxcrypt-4.5.2__1__37e093da2029f8f759bcc3339248de268b70614e2d9c02afd87f970eb2f34dff.gpkg.tar
 PGB-ASSET-ID-675733163-PATH: binrepo/0/x86_64-pc-linux-gnu__dev-python__platformdirs-4.12.0__1__f4d023b86b7849b9c04df8e616306d6b11d840bce04f51f437825dcfbd9c97d9.gpkg.tar
 PGB-ASSET-ID-676155753-PATH: binrepo/0/x86_64-pc-linux-gnu__app-crypt__gnupg-2.5.24-r2__1__f3bc9480b8e6acf27195e1ee838d88e0a205629ae1a8c9125ab1fc321ee1dea2.gpkg.tar
-PGB-CLEANUP: [{"asset_id":542251369,"release_id":374304579,"tag":"binrepo/0"},{"asset_id":650273360,"release_id":374304579,"tag":"binrepo/0"},{"asset_id":675731658,"release_id":374304579,"tag":"binrepo/0"}]
 PROFILE: default/linux/amd64/23.0
 REPO_REVISIONS: {"gentoo": "fea0e3a62db38548821fe20bd4cf70e965a26561"}
 TIMESTAMP: 1792963288
