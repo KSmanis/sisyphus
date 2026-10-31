@@ -198,7 +198,6 @@ PGB-ASSET-ID-696209277-PATH: binrepo/0/x86_64-pc-linux-gnu__dev-python__flit-cor
 PGB-ASSET-ID-696210101-PATH: binrepo/0/x86_64-pc-linux-gnu__dev-python__platformdirs-4.12.1__1__2d39f622b015c72c8d1f24f3af584a672bf316b3759a2893474988c6b3516006.gpkg.tar
 PGB-ASSET-ID-696210720-PATH: binrepo/0/x86_64-pc-linux-gnu__dev-python__hatchling-1.32.4__1__0414c1ba82ce4643e3db707e471b97b664b52e949525a15e500392380bf9b384.gpkg.tar
 PGB-ASSET-ID-696211388-PATH: binrepo/0/x86_64-pc-linux-gnu__dev-python__vcs-versioning-2.5.0__1__62a3a36da7ca23d8958946ce9f5f4728fd30000209381fc17d9e887bb17ea3b4.gpkg.tar
-PGB-CLEANUP: [{"asset_id":576351692,"release_id":374304579,"tag":"binrepo/0"}]
 PROFILE: default/linux/amd64/23.0
 REPO_REVISIONS: {"gentoo": "c2b7db57c4a3fa3a0d6984044d0fbedf615be292"}
 TIMESTAMP: 1793473073
