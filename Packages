@@ -231,7 +231,6 @@ PGB-ASSET-ID-733828747-PATH: binrepo/0/x86_64-pc-linux-gnu__net-misc__iputils-20
 PGB-ASSET-ID-735004549-PATH: binrepo/0/x86_64-pc-linux-gnu__net-misc__curl-8.23.0-r1__1__5fcd86520767a10ee5843f702bee8fafee3876f8db23032a539ba8957b3f6232.gpkg.tar
 PGB-ASSET-ID-740376394-PATH: binrepo/0/x86_64-pc-linux-gnu__net-misc__rsync-3.5.2-r1__1__2fa57b0aea5fc3c2f332399235fda44a0a18e962a11b7c0a8453f69ba8f55749.gpkg.tar
 PGB-ASSET-ID-745647985-PATH: binrepo/0/x86_64-pc-linux-gnu__dev-build__gtk-doc-am-1.36.1__1__1d37ac8347b395616a1148449565d1fe4663f38facf065878bd8e3df268973f5.gpkg.tar
-PGB-CLEANUP: [{"asset_id":576331762,"release_id":374304579,"tag":"binrepo/0"},{"asset_id":583177389,"release_id":374304579,"tag":"binrepo/0"},{"asset_id":722238525,"release_id":374304579,"tag":"binrepo/0"}]
 PROFILE: default/linux/amd64/23.0
 REPO_REVISIONS: {"gentoo": "27dfaae5f998c715456b1a370c41a2af546a8740"}
 TIMESTAMP: 1794638276
